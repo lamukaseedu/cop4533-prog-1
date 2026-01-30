@@ -1,4 +1,4 @@
-file = open("example.in") # Name of input file goes here
+file = open("../data/example.in") # Name of input file goes here
 n = file.readline() # Read n from first line
 if n == "":
   print("Error! Input missing n")
@@ -42,7 +42,7 @@ while (len(matches) < n): # Iterate as long as there is an unmatched hospital
   if hospital == n + 1:
     hospital = 1
 
-with open("example.out", "w") as file: # Name of output file goes here
+with open("../data/example.out", "w") as file: # Name of output file goes here
   for h in range(1, n + 1):
     s = matches[h]
     file.write(str(h) + " " + str(s)) # Write hospital and matched student combination
