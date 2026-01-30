@@ -1,11 +1,24 @@
 file = open("example.in") # Name of input file goes here
-n = int(file.readline()) # Read n from first line
+n = file.readline() # Read n from first line
+if n == "":
+  print("Error! Input missing n")
+  exit() # Terminate if file is empty
+else:
+  n = int(n)
 hospital_lists = []
-for i in range(0, n): # Read hospital preference lists from next n lines
-  hospital_lists.append(file.readline().split())
+for i in range(1, n + 1): # Read hospital preference lists from next n lines
+  line = file.readline()
+  if line == "":
+    print("Error! Input missing hospital line", i)
+    exit()
+  hospital_lists.append(line.split())
 student_lists = []
-for i in range(0, n): # Read student preference lists from next n lines
-  student_lists.append(file.readline().split())
+for i in range(1, n + 1): # Read student preference lists from next n lines
+  line = file.readline()
+  if line == "":
+    print("Error! Input missing student line", i)
+    exit()
+  student_lists.append(line.split())
 
 matches = {} # Dictionary matching hospitals to students; only contains matched hospitals
 choices = {key: 0 for key in range(1, n + 1)} # Dictionary keeping track of the index on each hospital's preference list
