@@ -17,7 +17,7 @@ while (len(matches) < n): # Iterate as long as there is an unmatched hospital
       matches[hospital] = student
     else: # If the student is matched, make a match if they prefer the current hospital to their current match
       current_match = [h for h, s in matches.items() if s == student][0]
-      for preference in student_lists[student]:
+      for preference in student_lists[student - 1]:
         if int(preference) == hospital: # If current hospital is first in the preference list
           matches[hospital] = student
           matches.pop(current_match) # Remove old match
