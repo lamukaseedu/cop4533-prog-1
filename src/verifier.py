@@ -1,4 +1,4 @@
-file = open("../data/example.in") # Name of input file goes here
+file = open("../data/generated.in") # Name of input file goes here
 n = file.readline() # Read n from first line
 if n == "":
     print("Error! Input missing n")
@@ -20,7 +20,7 @@ for i in range(1, n + 1): # Read student preference lists from next n lines
         exit()
     student_lists.append(line.split())
 
-file = open("../data/example.out") # Name of output file goes here
+file = open("../data/generated.out") # Name of output file goes here
 matchings = {}
 for i in range(0, n): # Read matchings from the next n lines
     line = file.readline()
