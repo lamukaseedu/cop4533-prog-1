@@ -3,7 +3,7 @@
 #### Will Berg: 39326193
 #### Lam Nguyen: 88729415
 
-Instructions: clone repo into an empty working directory, run matcher and verifier in IDE or in terminal with no arguments:
+Instructions: clone repo into an empty working directory, run matcher and verifier in IDE or in terminal with no arguments
 ```
 cd src
 python matcher.py
